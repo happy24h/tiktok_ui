@@ -10,15 +10,11 @@ function App() {
                 <Routes>
                     {publicRoutes.map((route, index) => {
                         const Page = route.component;
-
                         let Layout = DefaultLayout;
-                        console.log('Layout+++', Layout);
 
                         if (route.layout) {
                             Layout = route.layout;
-                            console.log('Layout---', Layout);
                         } else if (route.layout === null) {
-                            console.log('Layout+++', Layout);
                             Layout = Fragment;
                         }
 
