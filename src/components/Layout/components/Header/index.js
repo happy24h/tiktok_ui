@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faMagnifyingGlass, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faCircleXmark, faMagnifyingGlass, faSpinner, faSignIn } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless'; // different import path!
 
 import Button from '~/components/Button';
@@ -49,7 +49,10 @@ function Header() {
                     </div>
                 </Tippy>
                 <div className={cx('actions')}>
-                    <Button>Log in</Button>
+                    <Button text>Upload</Button>
+                    <Button primary rightIcon={<FontAwesomeIcon icon={faSignIn} />}>
+                        Log in
+                    </Button>
                 </div>
             </div>
         </header>
